@@ -32,7 +32,7 @@ export function Hero() {
   return (
     <div className="w-full min-h-screen flex items-center justify-center">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex gap-6 md:gap-8 py-6 md:py-20 lg:py-32 items-center justify-center flex-col">
+        <div className="flex gap-4 md:gap-8 py-2 md:py-20 lg:py-32 items-center justify-center flex-col">
           <div>
             <Link href="https://selar.co/az24" target="_blank" rel="noopener noreferrer">
               <Button variant="secondary" size="lg" className="gap-2 md:gap-4 text-xs sm:text-sm h-11">
@@ -40,9 +40,9 @@ export function Hero() {
               </Button>
             </Link>
           </div>
-          <div className="flex gap-3 md:gap-4 flex-col">
+          <div className="flex gap-2 md:gap-4 flex-col">
             <h1 className="tracking-tighter text-center font-regular">
-              <span className="text-primary block mb-1 md:mb-2 text-5xl sm:text-6xl md:text-7xl lg:text-8xl">Master Your</span>
+              <span className="text-primary block mb-0.5 md:mb-2 text-5xl sm:text-6xl md:text-7xl lg:text-8xl">Master Your</span>
               <LayoutGroup>
                 <motion.span layout className="flex justify-center">
                   <TextRotate
@@ -55,13 +55,13 @@ export function Hero() {
               </LayoutGroup>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-lg md:max-w-2xl text-center px-4 md:px-0">
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-lg md:max-w-2xl text-center px-2 md:px-0">
               Navigate the world of investments with confidence! From ETFs to Crypto, 
               Budgeting to kids&apos; financial education - WealthMotley is your friendly guide 
               through the exciting journey of building wealth.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-3 px-4 sm:px-0">
+          <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-2 px-2 sm:px-0">
             <Link href="/book-session" target="_blank" rel="noopener noreferrer">
               <div className="relative">
                 <div className="absolute -inset-[2px] rounded-lg bg-gradient-to-r from-purple-500 via-cyan-300 to-emerald-400 opacity-75 blur-lg transition-all group-hover:opacity-100 group-hover:blur-xl" />
