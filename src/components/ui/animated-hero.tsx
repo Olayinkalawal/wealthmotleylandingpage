@@ -16,23 +16,23 @@ export function Hero() {
     { text: "Future", preEmoji: "🔥    ", postEmoji: "    🔥" }
   ].map(({ text, emoji, preEmoji, postEmoji }) => (
     <div key={text} className="flex items-center gap-4">
-      {preEmoji && <span>{preEmoji}</span>}
+      {preEmoji && <span className="text-3xl sm:text-3xl md:text-4xl">{preEmoji}</span>}
       <GradientText
         colors={["#40ffaa", "#4079ff", "#40ffaa"]}
         animationSpeed={3}
-        className="font-semibold"
+        className="font-semibold text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
       >
         {text}
       </GradientText>
-      {emoji && <span>{emoji}</span>}
-      {postEmoji && <span>{postEmoji}</span>}
+      {emoji && <span className="text-3xl sm:text-3xl md:text-4xl">{emoji}</span>}
+      {postEmoji && <span className="text-3xl sm:text-3xl md:text-4xl">{postEmoji}</span>}
     </div>
   ));
 
   return (
     <div className="w-full min-h-screen flex items-center justify-center">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex gap-6 md:gap-8 py-10 md:py-20 lg:py-32 items-center justify-center flex-col">
+        <div className="flex gap-6 md:gap-8 py-6 md:py-20 lg:py-32 items-center justify-center flex-col">
           <div>
             <Link href="https://selar.co/az24" target="_blank" rel="noopener noreferrer">
               <Button variant="secondary" size="lg" className="gap-2 md:gap-4 text-xs sm:text-sm h-11">
@@ -41,13 +41,13 @@ export function Hero() {
             </Link>
           </div>
           <div className="flex gap-3 md:gap-4 flex-col">
-            <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl max-w-xl md:max-w-3xl tracking-tighter text-center font-regular">
-              <span className="text-primary block mb-1 md:mb-2">Master Your</span>
+            <h1 className="tracking-tighter text-center font-regular">
+              <span className="text-primary block mb-1 md:mb-2 text-5xl sm:text-6xl md:text-7xl lg:text-8xl">Master Your</span>
               <LayoutGroup>
                 <motion.span layout className="flex justify-center">
                   <TextRotate
                     texts={financialTerms}
-                    mainClassName="overflow-hidden h-16 sm:h-20 md:h-24 lg:h-32 font-semibold"
+                    mainClassName="overflow-hidden h-28 sm:h-32 md:h-36 lg:h-40 font-semibold"
                     rotationInterval={2000}
                     transition={{ type: "spring", damping: 30, stiffness: 400 }}
                   />
