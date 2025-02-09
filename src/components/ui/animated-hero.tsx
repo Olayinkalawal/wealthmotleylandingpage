@@ -4,7 +4,7 @@ import { motion, LayoutGroup } from "framer-motion";
 import { PhoneCall, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { TextRotate } from "@/components/ui/text-rotate";
+import { TextRotate } from "./text-rotate";
 import { GradientText } from "@/components/ui/gradient-text";
 
 export function Hero() {
