@@ -1,13 +1,11 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { motion, type Transition } from "framer-motion"
+import { motion, type Transition, AnimatePresence } from "framer-motion"
 
 interface TextRotateProps {
   texts: (string | React.ReactNode)[]
   mainClassName?: string
-  staggerDuration?: number
-  staggerFrom?: "first" | "last"
   rotationInterval?: number
   transition?: Transition
 }
@@ -15,8 +13,6 @@ interface TextRotateProps {
 export function TextRotate({
   texts,
   mainClassName,
-  staggerDuration = 0.03,
-  staggerFrom = "last",
   rotationInterval = 3000,
   transition,
 }: TextRotateProps) {
@@ -31,15 +27,20 @@ export function TextRotate({
   }, [texts.length, rotationInterval])
 
   return (
-    <motion.div
-      key={currentTextIndex}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={transition}
-      className={mainClassName}
-    >
-      {texts[currentTextIndex]}
-    </motion.div>
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={currentTextIndex}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={transition || {
+          duration: 0.5,
+          ease: "easeInOut"
+        }}
+        className={mainClassName}
+      >
+        {texts[currentTextIndex]}
+      </motion.div>
+    </AnimatePresence>
   )
 }
