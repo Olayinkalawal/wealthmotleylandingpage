@@ -48,7 +48,6 @@ export function Hero() {
                   <TextRotate
                     texts={financialTerms}
                     mainClassName="overflow-hidden h-16 sm:h-20 md:h-24 lg:h-32 font-semibold"
-                    staggerFrom="last"
                     rotationInterval={2000}
                     transition={{ type: "spring", damping: 30, stiffness: 400 }}
                   />
