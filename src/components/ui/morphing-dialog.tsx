@@ -54,10 +54,12 @@ function MorphingDialogProvider({
   const uniqueId = useId();
   const triggerRef = useRef<HTMLDivElement>(null);
 
-  const contextValue = useMemo(
-    () => ({ isOpen, setIsOpen, uniqueId, triggerRef }),
-    [isOpen, uniqueId]
-  );
+  const contextValue: MorphingDialogContextType = {
+    isOpen,
+    setIsOpen,
+    uniqueId,
+    triggerRef,
+  };
 
   return (
     <MorphingDialogContext.Provider value={contextValue}>
@@ -115,6 +117,7 @@ function MorphingDialogTrigger({
       onKeyDown={handleKeyDown}
       style={style}
       role='button'
+      tabIndex={0}
       aria-haspopup='dialog'
       aria-expanded={isOpen}
       aria-controls={`motion-ui-morphing-dialog-content-${uniqueId}`}
