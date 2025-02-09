@@ -30,9 +30,9 @@ export function Hero() {
   ));
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center">
+    <div className="w-full min-h-screen flex items-center justify-center -mt-8">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex gap-4 md:gap-8 py-2 md:py-20 lg:py-32 items-center justify-center flex-col">
+        <div className="flex gap-3 md:gap-8 py-0.5 md:py-20 lg:py-32 items-center justify-center flex-col">
           <div>
             <Link href="https://selar.co/az24" target="_blank" rel="noopener noreferrer">
               <Button variant="secondary" size="lg" className="gap-2 md:gap-4 text-xs sm:text-sm h-11">
