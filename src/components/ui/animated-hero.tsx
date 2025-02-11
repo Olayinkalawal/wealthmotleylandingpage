@@ -16,7 +16,7 @@ export function Hero() {
     { text: "Future", preEmoji: "🔥    ", postEmoji: "    🔥" }
   ].map(({ text, emoji, preEmoji, postEmoji }) => (
     <div key={text} className="flex items-center gap-4">
-      {preEmoji && <span className="text-3xl sm:text-3xl md:text-4xl">{preEmoji}</span>}
+      {preEmoji && <span className="text-5xl sm:text-6xl md:text-7xl">{preEmoji}</span>}
       <GradientText
         colors={["#40ffaa", "#4079ff", "#40ffaa"]}
         animationSpeed={3}
@@ -24,8 +24,14 @@ export function Hero() {
       >
         {text}
       </GradientText>
-      {emoji && <span className="text-3xl sm:text-3xl md:text-4xl">{emoji}</span>}
-      {postEmoji && <span className="text-3xl sm:text-3xl md:text-4xl">{postEmoji}</span>}
+      {text === "Stocks" ? (
+        <span className="text-4xl sm:text-5xl md:text-6xl">{emoji}</span>
+      ) : text === "Savings" ? (
+        <span className="text-6xl sm:text-7xl md:text-8xl">{emoji}</span>
+      ) : (
+        <span className="text-5xl sm:text-6xl md:text-7xl">{emoji}</span>
+      )}
+      {postEmoji && <span className="text-5xl sm:text-6xl md:text-7xl">{postEmoji}</span>}
     </div>
   ));
 
