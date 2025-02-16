@@ -11,16 +11,16 @@ const testimonials = [
   {
     quote:
       "The budget template transformed how I manage my finances. It's simple yet incredibly effective for daily expense tracking.",
-    name: "Temitope Sosanya",
+    name: "Temmy",
     designation: "Nurse Practitioner",
     src: "https://res.cloudinary.com/dheri3wii/image/upload/q_80,w_3560,f_auto,c_fill/Screenshot_2025-01-25_at_7.05.20_PM_eabjbx.jpg",
   },
   {
     quote:
-      "The one-on-one sessions with Shawls were game-changing. His personalized approach helped me create a solid investment strategy.",
-    name: "Ted Watson",
-    designation: "Professional",
-    src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop",
+      "Shawls helped me put my finances in perspective and always instills financial wisdom. She is my go to for investment advice.",
+    name: "Taaooma",
+    designation: "Nigerian Comedian",
+    src: "https://res.cloudinary.com/dheri3wii/image/upload/q_80,w_3540,f_auto,c_fill/v1739707272/679c0678c7b43763da5017d492406ae8_whqyqi.webp",
   },
   {
     quote:
