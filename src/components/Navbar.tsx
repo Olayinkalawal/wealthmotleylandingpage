@@ -80,14 +80,14 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
       <nav>
-        <div className="mx-auto max-w-screen-2xl pr-8 md:pr-12">
+        <div className="mx-auto max-w-screen-2xl">
           <div className="flex h-16 items-center justify-between">
             {/* Desktop Navigation */}
             <div className="hidden items-center justify-between w-full lg:flex">
               {/* Logo */}
               <div className="flex-1">
-                <a href="#home" onClick={handleLogoClick}>
-                  <img src="/logo.svg" className="w-64 dark:invert-0 invert" alt="logo" />
+                <a href="#home" onClick={handleLogoClick} className="block ml-0">
+                  <img src="/logo.svg" className="w-48 md:w-56 lg:w-64 dark:invert-0 invert" alt="logo" />
                 </a>
               </div>
               
@@ -108,19 +108,19 @@ const Navbar = () => {
               </div>
               
               {/* Mode Toggle */}
-              <div className="flex-1 flex justify-end">
+              <div className="flex-1 flex justify-end pr-4">
                 <ModeToggle />
               </div>
             </div>
 
             {/* Mobile Navigation */}
             <div className="flex items-center justify-between w-full lg:hidden">
-              <div className="flex items-center gap-2">
-                <a href="#home" onClick={handleLogoClick}>
-                  <img src="/logo.svg" className="w-64 dark:invert-0 invert" alt="logo" />
+              <div className="flex items-center">
+                <a href="#home" onClick={handleLogoClick} className="block ml-0">
+                  <img src="/logo.svg" className="w-40 sm:w-48 dark:invert-0 invert" alt="logo" />
                 </a>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 pr-4">
                 <ModeToggle />
                 <Sheet open={isOpen} onOpenChange={setIsOpen}>
                   <SheetTrigger asChild>
@@ -135,7 +135,7 @@ const Navbar = () => {
                           <a href="#home" onClick={handleLogoClick}>
                             <img
                               src="/logo.svg"
-                              className="w-56 dark:invert-0 invert"
+                              className="w-40 sm:w-48 dark:invert-0 invert"
                               alt="logo"
                             />
                           </a>
