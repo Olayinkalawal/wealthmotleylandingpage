@@ -13,7 +13,7 @@ const features = [
     step: 'Step 2',
     title: 'Wanna teach Kids about Money?',
     content: 'Discover WealthMotley\'s vibrant storybooks for kids! Fun tales that teach about savings, insurance, crypto, real estate, and more!',
-    image: 'https://res.cloudinary.com/dheri3wii/image/upload/q_80,w_2340,f_auto,c_fill/v1739704089/Colorful_Playful_Illustrative_Kids_Youtube_Channel_Banner_1_od4g2u.png',
+    image: '/kids-finance.jpg',
     link: 'https://youtu.be/Sxk4I7uSP7M?si=W2dM7r5Spx-vfdV4'
   },
   {

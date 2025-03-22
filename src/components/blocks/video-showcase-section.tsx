@@ -25,7 +25,7 @@ const PROJECTS: Project[] = [
       'Deep dive into current market events and their impact on your investment portfolio, with clear explanations and actionable insights.',
     link: 'https://youtu.be/59HwOOpXte8?si=qzPUYz89pxOxZdiL',
     video:
-      'https://res.cloudinary.com/dheri3wii/video/upload/v1739023067/WhatsApp_Video_2025-02-08_at_1.57.01_PM_drha19.mp4',
+      'https://www.youtube.com/embed/59HwOOpXte8',
     id: 'project1',
   },
   {
@@ -33,7 +33,7 @@ const PROJECTS: Project[] = [
     description: 'Discover practical tools and strategies to help you take control of your financial future and achieve your goals.',
     link: 'https://youtu.be/YubENiTC-Ho?si=hzy1SGHqpQ_uz3iO',
     video:
-      'https://res.cloudinary.com/dheri3wii/video/upload/v1739023179/WhatsApp_Video_2025-02-08_at_1.57.03_PM_qyxnke.mp4',
+      'https://www.youtube.com/embed/YubENiTC-Ho',
     id: 'project2',
   },
 ]
@@ -48,24 +48,23 @@ function ProjectVideo({ src }: { src: string }) {
       }}
     >
       <MorphingDialogTrigger>
-        <video
-          src={src}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="aspect-video w-full cursor-zoom-in rounded-xl"
-        />
+        <div className="aspect-video w-full cursor-zoom-in rounded-xl overflow-hidden">
+          <iframe
+            src={`${src}?autoplay=1&mute=1&loop=1&controls=0&playsinline=1`}
+            allow="autoplay; encrypted-media"
+            className="w-full h-full"
+            frameBorder="0"
+          />
+        </div>
       </MorphingDialogTrigger>
       <MorphingDialogContainer>
         <MorphingDialogContent className="relative mx-4 aspect-video max-h-[90vh] w-[90vw] max-w-5xl rounded-2xl bg-zinc-50 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950 dark:ring-zinc-800/50 sm:mx-6">
-          <video
-            src={src}
-            autoPlay
-            loop
-            controls
-            playsInline
-            className="h-full w-full rounded-xl object-contain"
+          <iframe
+            src={`${src}?autoplay=1&controls=1&playsinline=1`}
+            allow="autoplay; encrypted-media; fullscreen"
+            className="h-full w-full rounded-xl"
+            frameBorder="0"
+            allowFullScreen
           />
         </MorphingDialogContent>
         <MorphingDialogClose

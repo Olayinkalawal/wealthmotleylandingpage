@@ -10,9 +10,15 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'res.cloudinary.com',
+        hostname: 'www.youtube.com',
         port: '',
-        pathname: '/dheri3wii/**',
+        pathname: '/embed/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+        port: '',
+        pathname: '/**',
       },
     ],
   },
